@@ -1,0 +1,26 @@
+[Unit]
+Description=RSS News Reader Next.js frontend
+After=network.target rss-news-reader-api.service
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=<DEPLOY_USER>
+Group=<DEPLOY_USER>
+WorkingDirectory=/opt/rss-news-reader/frontend
+Environment=NODE_ENV=production
+Environment=PORT=3000
+EnvironmentFile=/opt/rss-news-reader/deploy/ubuntu/frontend.env
+ExecStart=/usr/bin/env npm run start -- --hostname 127.0.0.1 --port 3000
+Restart=always
+RestartSec=5
+
+# Sandboxing
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

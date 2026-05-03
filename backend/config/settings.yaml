@@ -1,0 +1,14 @@
+app_name: rss-news-reader
+environment: development
+database_url: sqlite:///data/news.db
+api_host: 127.0.0.1
+api_port: 8000
+request_timeout_seconds: 20
+user_agent: rss-news-reader/0.1 (+local)
+default_page_size: 10
+max_page_size: 50
+fetch_delay_seconds: 0.5
+retry_failed_limit: 50
+export_dir: data/exports
+failed_requests_path: data/failed_requests.jsonl
+samples_dir: samples

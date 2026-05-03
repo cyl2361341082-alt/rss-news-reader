@@ -1,0 +1,26 @@
+[Unit]
+Description=RSS News Reader FastAPI service
+After=network.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=<DEPLOY_USER>
+Group=<DEPLOY_USER>
+WorkingDirectory=/opt/rss-news-reader/backend
+Environment=PATH=/home/<DEPLOY_USER>/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=/opt/rss-news-reader/deploy/ubuntu/backend.env
+ExecStart=/usr/bin/env uv run news serve-api
+Restart=always
+RestartSec=5
+
+# Sandboxing
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/rss-news-reader/backend/data
+
+[Install]
+WantedBy=multi-user.target

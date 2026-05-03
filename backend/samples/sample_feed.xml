@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Sample Local Feed</title>
+    <link>https://example.local</link>
+    <description>Offline sample feed for rss-news-reader</description>
+    <item>
+      <title>Central banks slow down while markets keep climbing</title>
+      <link>article_bbc.html</link>
+      <guid>https://example.local/articles/central-banks-slow-down</guid>
+      <pubDate>Tue, 02 Apr 2024 09:00:00 GMT</pubDate>
+      <description>Investors are adjusting to a slower pace of rate cuts across major economies.</description>
+    </item>
+    <item>
+      <title>AI chip supply tightens as cloud budgets expand</title>
+      <link>article_bloomberg.html</link>
+      <guid>https://example.local/articles/ai-chip-supply-tightens</guid>
+      <pubDate>Tue, 02 Apr 2024 12:30:00 GMT</pubDate>
+      <description>Data-center demand is outpacing supply, leaving buyers to prioritise model training clusters.</description>
+    </item>
+  </channel>
+</rss>

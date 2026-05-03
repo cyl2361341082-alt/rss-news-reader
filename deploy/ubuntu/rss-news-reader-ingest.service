@@ -1,0 +1,20 @@
+[Unit]
+Description=RSS News Reader ingestion job
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=<DEPLOY_USER>
+Group=<DEPLOY_USER>
+WorkingDirectory=/opt/rss-news-reader/backend
+Environment=PATH=/home/<DEPLOY_USER>/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=/opt/rss-news-reader/deploy/ubuntu/backend.env
+ExecStart=/usr/bin/env uv run news run
+
+# Sandboxing
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/rss-news-reader/backend/data

@@ -1,0 +1,78 @@
+sources:
+  - id: sample-local
+    name: Sample Local Feed
+    category: sample
+    rss_url: samples/sample_feed.xml
+    enabled: true
+    site_url: https://example.local
+    language: en
+    extraction_strategy: css_selector
+    allowed_domains:
+      - example.local
+    extraction_selectors:
+      - article
+      - .story-body
+
+  - id: bbc-business
+    name: BBC Business
+    category: business
+    rss_url: https://feeds.bbci.co.uk/news/business/rss.xml
+    enabled: true
+    site_url: https://www.bbc.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - bbc.com
+      - www.bbc.com
+      - feeds.bbci.co.uk
+    extraction_selectors:
+      - article
+      - main article
+
+  - id: bbc-technology
+    name: BBC Technology
+    category: technology
+    rss_url: https://feeds.bbci.co.uk/news/technology/rss.xml
+    enabled: true
+    site_url: https://www.bbc.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - bbc.com
+      - www.bbc.com
+      - feeds.bbci.co.uk
+    extraction_selectors:
+      - article
+      - main article
+
+  - id: wsj-world-news
+    name: WSJ World News
+    category: world
+    rss_url: https://feeds.a.dj.com/rss/RSSWorldNews.xml
+    enabled: true
+    site_url: https://www.wsj.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - wsj.com
+      - www.wsj.com
+      - feeds.a.dj.com
+    extraction_selectors:
+      - article
+      - main
+
+  - id: wsj-markets
+    name: WSJ Markets
+    category: markets
+    rss_url: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+    enabled: true
+    site_url: https://www.wsj.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - wsj.com
+      - www.wsj.com
+      - feeds.a.dj.com
+    extraction_selectors:
+      - article
+      - main

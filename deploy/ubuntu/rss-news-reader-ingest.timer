@@ -1,0 +1,11 @@
+[Unit]
+Description=Run RSS News Reader ingestion every 30 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=30min
+Unit=rss-news-reader-ingest.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target
