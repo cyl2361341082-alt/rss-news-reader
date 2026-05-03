@@ -76,3 +76,37 @@ sources:
     extraction_selectors:
       - article
       - main
+
+  - id: bloomberg-markets
+    name: Bloomberg Markets
+    category: markets
+    rss_url: https://feeds.bloomberg.com/markets/news.rss
+    enabled: true
+    site_url: https://www.bloomberg.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - bloomberg.com
+      - www.bloomberg.com
+      - feeds.bloomberg.com
+    extraction_selectors:
+      - article
+      - '[data-component="body-content"]'
+      - .body-content
+
+  - id: bloomberg-technology
+    name: Bloomberg Technology
+    category: technology
+    rss_url: https://feeds.bloomberg.com/technology/news.rss
+    enabled: true
+    site_url: https://www.bloomberg.com
+    language: en
+    extraction_strategy: readability
+    allowed_domains:
+      - bloomberg.com
+      - www.bloomberg.com
+      - feeds.bloomberg.com
+    extraction_selectors:
+      - article
+      - '[data-component="body-content"]'
+      - .body-content
