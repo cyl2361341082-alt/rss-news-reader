@@ -12,4 +12,4 @@ retry_failed_limit: 50
 export_dir: data/exports
 failed_requests_path: data/failed_requests.jsonl
 samples_dir: samples
-browser_fetch_sources: wsj-world-news,wsj-markets,bloomberg-markets,bloomberg-technology
+browser_fetch_sources: wsj-world-news,wsj-markets
